@@ -9,9 +9,9 @@ while True:
         result=arithmetic(a,b,c)
         print(result)
     elif v.upper()=="B":
-        year=int(input("Sisesta aasta: "))
-        result=is_year_leap(year)
-        print(result)
+        year=int(input("sisesta aasta"))
+        rezolut=is_year_leap(year)
+        print(rezolut)
     elif v.upper()=="C":
         kv=int(input("Sisestage ruudu külg: "))
         result=square(kv)

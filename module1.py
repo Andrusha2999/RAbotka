@@ -1,38 +1,39 @@
 def arithmetic(a: float,b:float,c=str):
     """Lihtne kalkulaator
-    + - liitamine
-    - - lahutamine
-    * - korrutamine
-    / - jagamine
+    +-liitmine
+    --lahutamine
+    *-korrutamine
+    /-jagamine
     :param float a: Esimene arv
     :param float b: Teine arv
-    :param str c: Aritmeetiline tehing
-    :rtype float:
-    """
+    :param str c: Arimeetiline tehing
+    :rtype float:"""
     if c=="+":
         r=a+b
     elif c=="-":
         r=a-b
     elif c=="*":
         r=a*b
-    elif c=="/":
+    elif c==":":
         if b!=0:
             r=a/b
         else:
             print("Div0")
+            r=0.0
     else:
-        print("Viga!")
-    return("")
-def is_year_leap(year:int)->bool:
-    """Kirjutame suvalise aasta ja programm määrab ära, kas viisaaasta või mitte, kas True või False.
-    :param int year:esimene arv
-    :rtype str
+        print("viga")
+    return r
+def is_year_leap(aasta: int):
+    """Liigaasta leidmine
+    Tagastab true kui aasta on liigasta ja Flase kui ei ole 
+    :parem int aasta: Aasata number 
+    :rtype bool: Funksionid vastus loogilised formaadis
     """
-    if year%4==0:
-        t=True
+    if aasta%4==0:
+        vastus=True
     else:
-        t=False
-    return("")
+        vastus=False
+    return vastus 
 def square(kv:float):
     """Мы пишем сторону квадрата, и программа выдает нам площадь квадрата, периметр и диагональ
     :param int kv:esimene arv
