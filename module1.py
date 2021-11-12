@@ -25,7 +25,7 @@ def arithmetic(a: float,b:float,c=str):
     return r
 def is_year_leap(aasta: int):
     """Liigaasta leidmine
-    Tagastab true kui aasta on liigasta ja Flase kui ei ole 
+    Возвращает значение true, если год слишком короткий, и значение Flase, если нет
     :parem int aasta: Aasata number 
     :rtype bool: Funksionid vastus loogilised formaadis
     """
@@ -57,16 +57,6 @@ def season(kuu:int):
     else:
         print("Viga!")
     return
-def bank(a:float,years:int):
-    """Мы кладем деньги на баланс и ждем n лет
-    :param float a:Esimene arv
-    :param float years: Teine arv
-    :rtype float
-    """
-    for _ in range(years):
-        a=((1.1*1/100)*a)*100
-    print("Ваш баланс:",a)
-    return("")
 def is_prime(a:int):
     """Мы записываем число от 0 до 1000 и возвращаем true, если простое, и True, если ложное.
     :param int a:Esimene arv
@@ -118,3 +108,13 @@ def date(day:int, month:int, year:int):
             return False
     else:
         return False
+def bank(a:float,years:int):
+    """Paneme raha saldole ja ootame n arv aastaid
+    :param float a:Esimene arv
+    :param float years: Teine arv
+    :rtype float
+    """
+    for _ in range(years):
+        a=((1.1*1/100)*a)*100
+    print("Ваш баланс:",a)
+    return("")
