@@ -1,7 +1,7 @@
 from module1 import *
 while True:
     print("Funktsioonid".center(50,"+"))
-    v=input("arithmetic- A, \nis_year_leap- B, \nsquare- C, \nseason- D, \nbank- E, \nkodeeriumine- x")
+    v=input("arithmetic- A \nis_year_leap- B \nsquare- C \nseason- X \nbank- U \nis_prime- F \ndate- L \nxor_cipher- K")
     if v.upper()=="A":
         a=float(input("Arv 1: "))
         b=float(input("Arv 2: "))
@@ -29,10 +29,16 @@ while True:
         a=int(input("Sisestage number: "))
         result=is_prime(a)
         print(result)
-    elif v.upper()=="x":
-        print("Kodeeremine".center(60,"*"))
-        rezult=xor_cipher(input("sisesta text"),input("sisesta võti:"))
-        print(rezult)
-        print("dekoderiumine".center(60,"*"))
-        de_rezult=xor_ciper(input("sisesta võti")
+    elif v.upper()=="K":
+        print("Kodeerimine".center(60,"*"))
+        result=xor_cipher(input("Sisesta text"), input("Sisesta võti :"))
+        print(result)
+        print("Dekodeerimine". center(60,"*"))
+        de_rezult=xor_uncipher(result, input("Sisesta võti:"))
         print(de_rezult)
+    elif v.upper()=="G":
+        day=int(input("Sisestage päev: "))
+        month=int(input("Sisestage kuu: "))
+        year=int(input("Sisestage aasta: "))
+        result=date(day,month,year)
+        print(result)
