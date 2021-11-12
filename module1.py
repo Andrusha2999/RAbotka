@@ -23,26 +23,30 @@ def arithmetic(a: float,b:float,c=str):
     else:
         print("Viga!")
     return("")
-def is_year_leap(year:int):
-    """Мы пишем произвольный год, и программа определяет, является ли год визы Истинным или ложным.
+def is_year_leap(year:int)->bool:
+    """Kirjutame suvalise aasta ja programm määrab ära, kas viisaaasta või mitte, kas True või False.
+    :param int year:esimene arv
+    :rtype str
     """
     if year%4==0:
-        print("True")
+        t=True
     else:
-        print("False")
+        t=False
     return("")
 def square(kv:float):
     """Мы пишем сторону квадрата, и программа выдает нам площадь квадрата, периметр и диагональ
+    :param int kv:esimene arv
+    :rtype float
     """
     return(4*kv, kv**2, (2*kv**2)**.5)
     return("")
 def season(kuu:int):
     """Мы пишем от 1 до 12 месяцев, и программа устанавливает сезон по месяцам
+    :param int kuu: esimene arv
+    :rtype str
     """
-    if kuu==12:
-        print("Зима")
-    elif 0<kuu<3:
-        print("Зима")
+    if kuu==12 or 1<=kuu<=2:
+       print("Зима")
     elif 2<kuu<6:
         print("Весна")
     elif 5<kuu<9:
@@ -53,15 +57,19 @@ def season(kuu:int):
         print("Viga!")
     return
 def bank(a:float,years:int):
-    """
-        Мы кладем деньги на баланс и ждем n лет
+    """Мы кладем деньги на баланс и ждем n лет
+    :param float a:Esimene arv
+    :param float years: Teine arv
+    :rtype float
     """
     for _ in range(years):
         a=((1.1*1/100)*a)*100
     print("Ваш баланс:",a)
     return("")
 def is_prime(a:int):
-    """Мы записываем число от 0 до 1000 и возвращаем true, если оно простое, и false в противном случае.
+    """Мы записываем число от 0 до 1000 и возвращаем true, если простое, и True, если ложное.
+    :param int a:Esimene arv
+    :rtype str
     """
     b=2
     while a%b!=0:
@@ -69,6 +77,8 @@ def is_prime(a:int):
     return b==a
 def xor_cipher(string:str, key:str)->str:
     """Обычное кодирование слов
+    :param str string: Esimene arv
+    :param str key: Teine arv
     """
     result=""
     temp=int()
@@ -80,6 +90,8 @@ def xor_cipher(string:str, key:str)->str:
     return result
 def xor_uncipher(string:str, key: str)->str:
     """кодирование декодированного текста
+    :param str string: Esimene arv
+    :param str key: Teine arv
     """
     result = ""
     temp = []
@@ -90,6 +102,13 @@ def xor_uncipher(string:str, key: str)->str:
         result += temp[i]
     return result
 def date(day:int, month:int, year:int):
+    """Мы пишем день, месяц, год, если его нет в календаре, то программа пишет False,
+если это так, то программа пишет True.
+    :param int day: Esimene arv
+    :param int month: Teine arv
+    :param int year: Kolmas arv
+    :rtype str:
+    """
     set_months = {1: 31,2: 28, 3: 31,4: 30,5: 31,6: 30,7: 31,8: 31,9: 30,10: 31,11: 30,12: 31}
     if year>0 and (month>=1 and month<=12):
         if day in range(1, set_months[month]+1):

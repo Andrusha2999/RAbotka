@@ -1,7 +1,7 @@
 from module1 import *
 while True:
     print("Funktsioonid".center(50,"+"))
-    v=input("arithmetic- A \nis_year_leap- B \nsquare- C \nseason- X \nbank- U \nis_prime- F \ndate- L \nxor_cipher- K")
+    v=input("arithmetic- A \nis_year_leap- B \nsquare- C \nseason- D \nbank- E \nis_prime- F \ndate- G \nxor_cipher- K")
     if v.upper()=="A":
         a=float(input("Arv 1: "))
         b=float(input("Arv 2: "))
